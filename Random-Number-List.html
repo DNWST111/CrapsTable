@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Random Calculations</title>
+<style>
+
+div{
+border: 3px solid orange;
+width: 45%;
+height: 300px;
+margin: auto;
+background-color:lightgray;
+overflow:scroll;
+}
+
+.show{
+margin-left: 45%;
+height:65px;
+width:95px;
+}
+
+h1{
+text-align:center;
+margin-top:30px;
+}
+
+p{
+padding: 10px;
+font-size: 48px;
+text-align:center;
+valign:top;
+}
+</style>
+</head>
+<body>
+<h1>Press button to update to show random numbers</h1>
+
+<div>
+<p id="addRan"></p>
+</div>
+
+<button class="show" onclick="randShow()">Update </button>
+
+<script>
+function randShow(){
+var add= Math.floor((Math.random()*50)+10);
+for(i = 0; i <= 15; i++){
+var random= Math.floor((Math.random()*8)+1);
+add += "<br/>" + random;
+}
+document.getElementById("addRan").innerHTML = "<ins>List Numbers</ins>" + "<br/>" + add;
+}
+</script>
+</body>
+</html>
